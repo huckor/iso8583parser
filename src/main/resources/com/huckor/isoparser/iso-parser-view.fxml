@@ -9,20 +9,31 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <Spinner fx:id="startingPointLeft" editable="true" initialValue="0" prefHeight="26.0" prefWidth="72.0">
-       <valueFactory>
-           <SpinnerValueFactory.IntegerSpinnerValueFactory max="1000" min="0" />
-       </valueFactory>
-   </Spinner>
+    <HBox prefHeight="0.0" prefWidth="344.0">
+        <VBox alignment="CENTER_LEFT" prefHeight="0" prefWidth="47.0">
+            <Label text="Start">
+                <font>
+                    <Font name="Monospaced Bold" size="14.0"/>
+                </font>
+            </Label>
+        </VBox>
+        <Spinner fx:id="startingPointLeft" editable="true" initialValue="0" prefHeight="26.0" prefWidth="72.0">
+            <valueFactory>
+                <SpinnerValueFactory.IntegerSpinnerValueFactory max="1000" min="0"/>
+            </valueFactory>
+        </Spinner>
+    </HBox>
    <TextArea fx:id="textAreaIsoIn" prefHeight="100.0" prefWidth="200.0" promptText="Paste your ISO message here" style="-fx-text-fill: black;" wrapText="true">
        <font>
            <Font name="Monospaced Regular" size="13.0" />
        </font>
    </TextArea>
-   <TextArea fx:id="textAreaIsoOut" editable="false" style="-fx-text-fill: black;" VBox.vgrow="ALWAYS">
+   <TextArea fx:id="textAreaIsoOut" editable="false" promptText="Parsed result will be here" style="-fx-text-fill: black;" VBox.vgrow="ALWAYS">
       <font>
          <Font name="Monospaced Regular" size="13.0" />
       </font>
    </TextArea>
-    <Button onAction="#onPasteButtonClick" text="parse" />
+   <HBox alignment="CENTER_RIGHT" prefHeight="0" prefWidth="200.0">
+       <Button onAction="#onPasteButtonClick" text="parse" />
+   </HBox>
 </VBox>

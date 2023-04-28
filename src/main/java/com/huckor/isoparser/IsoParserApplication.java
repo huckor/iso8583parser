@@ -14,6 +14,8 @@ public class IsoParserApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("Iso Parser");
         stage.setScene(scene);
+        stage.setMinHeight(600);
+        stage.setMinWidth(800);
         stage.show();
     }
 

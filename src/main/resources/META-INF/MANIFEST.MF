@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: com.huckor.isoparser.IsoParserApplication
+Class-Path: javafx-controls-18.0.1-mac.jar slf4j-api-1.7.36.jar controls
+ fx-11.1.1.jar javafx-graphics-18.0.1.jar javafx-base-18.0.1.jar javafx-
+ base-18.0.1-mac.jar javafx-controls-18.0.1.jar javafx-graphics-18.0.1-m
+ ac.jar j8583-1.17.18.jar javafx-fxml-18.0.1-mac.jar
+

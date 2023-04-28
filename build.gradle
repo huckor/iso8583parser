@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'org.beryx.jlink' version '2.25.0'
+}
+
+group 'com.huckor'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.9.0'
+}
+
+sourceCompatibility = '18'
+targetCompatibility = '18'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainModule = 'com.huckor.isoparser'
+    mainClass = 'com.huckor.isoparser.IsoParserApplication'
+}
+
+mainClassName = 'IsoParserApplication'
+
+javafx {
+    version = '18.0.1'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+dependencies {
+    implementation('org.controlsfx:controlsfx:11.1.1')
+    implementation('com.github.kpavlov.jreactive8583:netty-iso8583:1.4.1')
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jlink {
+    mergedModule {
+        requires "java.xml"
+    }
+    imageZip = project.file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip")
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'IsoParser'
+    }
+}
+
+jlinkZip {
+    group = 'distribution'
+}

@@ -1,7 +1,13 @@
 Manifest-Version: 1.0
 Main-Class: com.huckor.isoparser.IsoParserApplication
-Class-Path: javafx-controls-18.0.1-mac.jar slf4j-api-1.7.36.jar controls
- fx-11.1.1.jar javafx-graphics-18.0.1.jar javafx-base-18.0.1.jar javafx-
- base-18.0.1-mac.jar javafx-controls-18.0.1.jar javafx-graphics-18.0.1-m
- ac.jar j8583-1.17.18.jar javafx-fxml-18.0.1-mac.jar
+Class-Path: slf4j-api-1.7.36.jar netty-buffer-4.1.78.Final.jar javafx-fx
+ ml-18.0.1-mac.jar j8583-1.17.0.jar javafx-base-18.0.1-mac.jar netty-han
+ dler-4.1.78.Final.jar kotlin-stdlib-jdk7-1.7.0.jar netty-common-4.1.78.
+ Final.jar javafx-controls-18.0.1-mac.jar netty-codec-4.1.78.Final.jar n
+ etty-resolver-4.1.78.Final.jar jsr305-3.0.2.jar netty-transport-native-
+ unix-common-4.1.78.Final.jar netty-iso8583-1.4.1.jar kotlin-stdlib-comm
+ on-1.7.0.jar javafx-graphics-18.0.1-mac.jar annotations-13.0.jar kotlin
+ -stdlib-jdk8-1.7.0.jar netty-transport-4.1.78.Final.jar controlsfx-11.1
+ .1.jar javafx-graphics-18.0.1.jar kotlin-stdlib-1.7.0.jar javafx-base-1
+ 8.0.1.jar javafx-controls-18.0.1.jar
 

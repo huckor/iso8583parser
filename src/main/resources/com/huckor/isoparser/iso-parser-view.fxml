@@ -17,18 +17,18 @@
                 </font>
             </Label>
         </VBox>
-        <Spinner fx:id="startingPointLeft" editable="true" initialValue="0" prefHeight="26.0" prefWidth="72.0">
+        <Spinner fx:id="startPoint" editable="true" initialValue="0" prefHeight="26.0" prefWidth="72.0">
             <valueFactory>
                 <SpinnerValueFactory.IntegerSpinnerValueFactory max="1000" min="0"/>
             </valueFactory>
         </Spinner>
     </HBox>
-   <TextArea fx:id="textAreaIsoIn" prefHeight="100.0" prefWidth="200.0" promptText="Paste your ISO message here" style="-fx-text-fill: black;" wrapText="true">
+   <TextArea fx:id="isoIn" prefHeight="100.0" prefWidth="200.0" promptText="Paste your ISO message in HEX format here" style="-fx-text-fill: black;" wrapText="true">
        <font>
            <Font name="Monospaced Regular" size="13.0" />
        </font>
    </TextArea>
-   <TextArea fx:id="textAreaIsoOut" editable="false" promptText="Parsed result will be here" style="-fx-text-fill: black;" VBox.vgrow="ALWAYS">
+   <TextArea fx:id="isoOut" editable="false" promptText="Parsed result will be here" style="-fx-text-fill: black;" VBox.vgrow="ALWAYS">
       <font>
          <Font name="Monospaced Regular" size="13.0" />
       </font>

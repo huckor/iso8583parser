@@ -60,7 +60,7 @@ public class IsoParserController {
             }
 
             if(startPoint.getValue() > 0) {
-                in = in.substring(startPoint.getValue());
+                in = in.substring(startPoint.getValue() * 2);
             }
 
             IsoMessage message = messageFactory.parseMessage(Helpers.asciiToBin(in), 0);

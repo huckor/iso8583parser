@@ -47,7 +47,7 @@
         </font>
     </TextArea>
     <HBox alignment="CENTER_RIGHT" prefHeight="0" prefWidth="200.0">
-        <Button onAction="#onPasteButtonClick" text="parse">
+        <Button onAction="#onParseButtonClick" text="parse">
             <font>
                 <Font name="Monospaced Regular" size="14.0" />
             </font>

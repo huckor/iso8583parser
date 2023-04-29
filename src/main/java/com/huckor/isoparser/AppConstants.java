@@ -7,6 +7,8 @@ public class AppConstants {
     public static Map<Integer, String> isoFieldNames;
     static {
         isoFieldNames = new HashMap<>();
+        isoFieldNames.put(0, "Message type");
+        isoFieldNames.put(1, "Bitmap");
         isoFieldNames.put(2, "Primary account number (PAN)");
         isoFieldNames.put(3, "Processing Code");
         isoFieldNames.put(4, "Amount Transaction");

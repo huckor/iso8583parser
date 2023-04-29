@@ -18,7 +18,7 @@ import java.net.URL;
 public class IsoParserController {
     public TextArea isoIn;
     public TextArea isoOut;
-    public Spinner startPoint;
+    public Spinner<Integer> startPoint;
     private static Stage appStage;
     private URL iso8583SpecFile = IsoParserApplication.class.getResource("parser-template.xml");
 
@@ -30,6 +30,9 @@ public class IsoParserController {
     protected void onOpenIso8583SpecButtonClick() {
         FileChooser fileChooser = new FileChooser();
         File file = fileChooser.showOpenDialog(appStage);
+        if(file == null) {
+            return;
+        }
         try {
             iso8583SpecFile = file.toURI().toURL();
         } catch (SecurityException | MalformedURLException | IllegalArgumentException e) {
@@ -38,7 +41,7 @@ public class IsoParserController {
     }
 
     @FXML
-    protected void onPasteButtonClick() {
+    protected void onParseButtonClick() {
         String in = isoIn.getText();
         if(in == null || in.isEmpty()) {
             return;
@@ -56,8 +59,8 @@ public class IsoParserController {
                 ConfigParser.configureFromUrl(messageFactory, iso8583SpecFile);
             }
 
-            if(((int) startPoint.getValue()) > 0) {
-                in = in.substring((int) startPoint.getValue());
+            if(startPoint.getValue() > 0) {
+                in = in.substring(startPoint.getValue());
             }
 
             IsoMessage message = messageFactory.parseMessage(Helpers.asciiToBin(in), 0);
@@ -65,8 +68,14 @@ public class IsoParserController {
                 return;
             }
 
+            //Message type
             StringBuilder out = new StringBuilder();
-            for (int i = 2; i <= 128; i++) {
+            out.append(String.format("%03d ", 0));
+            out.append(String.format("%-40s : ", AppConstants.isoFieldNames.get(0) == null ? "Unknown name" : AppConstants.isoFieldNames.get(0)));
+            out.append(String.format("%04X ", message.getType())).append("\n");
+
+            //Loop through all ISO fields
+            for (int i = 1; i <= 128; i++) {
                 IsoValue<?> field = message.getField(i);
                 if(field == null) {
                     continue;

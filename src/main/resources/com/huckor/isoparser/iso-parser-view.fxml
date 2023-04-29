@@ -9,31 +9,48 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <HBox prefHeight="0.0" prefWidth="344.0">
-        <VBox alignment="CENTER_LEFT" prefHeight="0" prefWidth="47.0">
-            <Label text="Start">
+    <HBox prefHeight="0.0" prefWidth="Infinity" spacing="3">
+        <VBox alignment="CENTER_LEFT" prefHeight="0" prefWidth="90.0">
+            <Label text="Skip first">
                 <font>
-                    <Font name="Monospaced Bold" size="14.0"/>
+                    <Font name="Monospaced Bold" size="14.0" />
                 </font>
             </Label>
         </VBox>
-        <Spinner fx:id="startPoint" editable="true" initialValue="0" prefHeight="26.0" prefWidth="72.0">
+        <Spinner fx:id="startPoint" editable="true" initialValue="0" prefHeight="0" prefWidth="72.0">
             <valueFactory>
-                <SpinnerValueFactory.IntegerSpinnerValueFactory max="1000" min="0"/>
+                <SpinnerValueFactory.IntegerSpinnerValueFactory max="1000" min="0" />
             </valueFactory>
         </Spinner>
+        <VBox alignment="CENTER_RIGHT" prefHeight="0" prefWidth="50.0">
+            <Label text="bytes">
+                <font>
+                    <Font name="Monospaced Bold" size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+        <Pane HBox.hgrow="ALWAYS" />
+        <Button onAction="#onOpenIso8583SpecButtonClick" mnemonicParsing="false" text="Open ISO8583 spec.">
+            <font>
+                <Font name="Monospaced Regular" size="14.0" />
+            </font>
+        </Button>
     </HBox>
-   <TextArea fx:id="isoIn" prefHeight="100.0" prefWidth="200.0" promptText="Paste your ISO message in HEX format here" style="-fx-text-fill: black;" wrapText="true">
+    <TextArea fx:id="isoIn" prefHeight="100.0" prefWidth="200.0" promptText="Paste your ISO message in HEX format here" style="-fx-text-fill: black;" wrapText="true">
        <font>
            <Font name="Monospaced Regular" size="13.0" />
        </font>
-   </TextArea>
-   <TextArea fx:id="isoOut" editable="false" promptText="Parsed result will be here" style="-fx-text-fill: black;" VBox.vgrow="ALWAYS">
-      <font>
-         <Font name="Monospaced Regular" size="13.0" />
-      </font>
-   </TextArea>
-   <HBox alignment="CENTER_RIGHT" prefHeight="0" prefWidth="200.0">
-       <Button onAction="#onPasteButtonClick" text="parse" />
-   </HBox>
+    </TextArea>
+    <TextArea fx:id="isoOut" editable="false" promptText="Parsed result will be here" style="-fx-text-fill: black;" VBox.vgrow="ALWAYS">
+        <font>
+            <Font name="Monospaced Regular" size="13.0" />
+        </font>
+    </TextArea>
+    <HBox alignment="CENTER_RIGHT" prefHeight="0" prefWidth="200.0">
+        <Button onAction="#onPasteButtonClick" text="parse">
+            <font>
+                <Font name="Monospaced Regular" size="14.0" />
+            </font>
+        </Button>
+    </HBox>
 </VBox>

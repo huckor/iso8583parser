@@ -16,6 +16,7 @@ public class IsoParserApplication extends Application {
         stage.setScene(scene);
         stage.setMinHeight(600);
         stage.setMinWidth(800);
+        IsoParserController.setStage(stage);
         stage.show();
     }
 

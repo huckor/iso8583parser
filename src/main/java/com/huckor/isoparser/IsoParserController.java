@@ -1,10 +1,6 @@
 package com.huckor.isoparser;
 
 
-import com.solab.iso8583.IsoMessage;
-import com.solab.iso8583.IsoValue;
-import com.solab.iso8583.MessageFactory;
-import com.solab.iso8583.parse.ConfigParser;
 import javafx.fxml.FXML;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.TextArea;
@@ -20,7 +16,7 @@ public class IsoParserController {
     public TextArea isoOut;
     public Spinner<Integer> startPoint;
     private static Stage appStage;
-    private URL iso8583SpecFile = IsoParserApplication.class.getResource("parser-template.xml");
+    private URL isoSpecFile = IsoParserApplication.class.getResource(AppConstants.DEFAULT_ISO_SPEC_FILE);
 
     public static void setStage(Stage stage) {
         appStage = stage;
@@ -34,7 +30,7 @@ public class IsoParserController {
             return;
         }
         try {
-            iso8583SpecFile = file.toURI().toURL();
+            isoSpecFile = file.toURI().toURL();
         } catch (SecurityException | MalformedURLException | IllegalArgumentException e) {
             isoOut.setText(e.getMessage());
         }
@@ -42,58 +38,6 @@ public class IsoParserController {
 
     @FXML
     protected void onParseButtonClick() {
-        String in = isoIn.getText();
-        if(in == null || in.isEmpty()) {
-            return;
-        }
-
-        try {
-            MessageFactory<IsoMessage> messageFactory = new MessageFactory<>();
-            messageFactory.setBinaryFields(true);
-            messageFactory.setBinaryHeader(true);
-            messageFactory.setIgnoreLastMissingField(true);
-
-            if(iso8583SpecFile == null) {
-                ConfigParser.configureFromDefault(messageFactory);
-            } else {
-                ConfigParser.configureFromUrl(messageFactory, iso8583SpecFile);
-            }
-
-            if(startPoint.getValue() > 0) {
-                in = in.substring(startPoint.getValue() * 2);
-            }
-
-            IsoMessage message = messageFactory.parseMessage(Helpers.asciiToBin(in), 0);
-            if(message == null) {
-                return;
-            }
-
-            //Message type
-            StringBuilder out = new StringBuilder();
-            out.append(String.format("%03d ", 0));
-            out.append(String.format("%-40s : ", AppConstants.isoFieldNames.get(0) == null ? "Unknown name" : AppConstants.isoFieldNames.get(0)));
-            out.append(String.format("%04X ", message.getType())).append("\n");
-
-            //Loop through all ISO fields
-            for (int i = 1; i <= 128; i++) {
-                IsoValue<?> field = message.getField(i);
-                if(field == null) {
-                    continue;
-                }
-                //Iso field number
-                out.append(String.format("%03d ", i));
-                //Iso field name
-                out.append(String.format("%-40s : ", AppConstants.isoFieldNames.get(i) == null ? "Unknown name" : AppConstants.isoFieldNames.get(i)));
-                //Iso field value
-                try {
-                    out.append(field).append("\n");
-                } catch (Exception e) {
-                    out.append(e.getMessage()).append("\n");
-                }
-            }
-            this.isoOut.setText(out.toString());
-        } catch (Exception e) {
-            isoOut.setText(e.getMessage());
-        }
+        isoOut.setText(new IsoParser().parseMessage(isoIn.getText(), startPoint.getValue(), isoSpecFile));
     }
 }

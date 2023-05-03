@@ -6,6 +6,7 @@ import com.solab.iso8583.MessageFactory;
 import com.solab.iso8583.parse.ConfigParser;
 
 import java.net.URL;
+import java.util.Objects;
 
 public class IsoParser {
     public String parseMessage(final String isoMessage, final int messageStartPoint, final URL isoSpecFile) {
@@ -26,11 +27,8 @@ public class IsoParser {
         messageFactory.setIgnoreLastMissingField(true);
 
         try {
-            if(isoSpecFile == null) {
-                ConfigParser.configureFromDefault(messageFactory);
-            } else {
-                ConfigParser.configureFromUrl(messageFactory, isoSpecFile);
-            }
+            ConfigParser.configureFromUrl(messageFactory, Objects.requireNonNullElseGet(isoSpecFile, () ->
+                    Objects.requireNonNull(IsoParserApplication.class.getResource(AppConstants.DEFAULT_ISO_SPEC_FILE))));
 
             IsoMessage message = messageFactory.parseMessage(Helpers.asciiToBin(clearIsoMessage), 0);
             if(message == null) {

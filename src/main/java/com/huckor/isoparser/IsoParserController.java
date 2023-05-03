@@ -16,7 +16,7 @@ public class IsoParserController {
     public TextArea isoOut;
     public Spinner<Integer> startPoint;
     private static Stage appStage;
-    private URL isoSpecFile = IsoParserApplication.class.getResource(AppConstants.DEFAULT_ISO_SPEC_FILE);
+    private URL isoSpecFile;
 
     public static void setStage(Stage stage) {
         appStage = stage;

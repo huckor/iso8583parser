@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27cb8391-b44b-45fd-ac8f-85389a8ff575" name="Changes" comment="Fixed - skipping first X bytes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/huckor/isoparser/IsoParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/huckor/isoparser/IsoParserTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="27cb8391-b44b-45fd-ac8f-85389a8ff575" name="Changes" comment="Implemented - unit tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/huckor/isoparser/AppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huckor/isoparser/AppConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/huckor/isoparser/IsoParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huckor/isoparser/IsoParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/huckor/isoparser/IsoParserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huckor/isoparser/IsoParserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/huckor/isoparser/iso-parser-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/huckor/isoparser/iso-parser-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/huckor/isoparser/IsoParserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/huckor/isoparser/IsoParserTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,13 +110,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682755766761</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implemented - unit tests">
+      <created>1683041504392</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683041504392</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implemented - open file dialog to load custom ISO8583 specifications." />
     <MESSAGE value="Implemented - parsing of message type" />
     <MESSAGE value="Fixed - skipping first X bytes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed - skipping first X bytes" />
+    <MESSAGE value="Implemented - unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented - unit tests" />
   </component>
 </project>

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27cb8391-b44b-45fd-ac8f-85389a8ff575" name="Changes" comment="Implemented - unit tests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/huckor/isoparser/IsoParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huckor/isoparser/IsoParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/huckor/isoparser/IsoParserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huckor/isoparser/IsoParserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/huckor/isoparser/IsoParserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/huckor/isoparser/IsoParserTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="27cb8391-b44b-45fd-ac8f-85389a8ff575" name="Changes" comment="Added one more test. Fine tune code." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683041504392</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added one more test. Fine tune code.">
+      <created>1683134396799</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683134396799</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -125,6 +127,7 @@
     <MESSAGE value="Implemented - parsing of message type" />
     <MESSAGE value="Fixed - skipping first X bytes" />
     <MESSAGE value="Implemented - unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented - unit tests" />
+    <MESSAGE value="Added one more test. Fine tune code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added one more test. Fine tune code." />
   </component>
 </project>

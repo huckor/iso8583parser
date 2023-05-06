@@ -6,6 +6,7 @@ jobs:
   build-gradle-project:
     runs-on: ubuntu-latest
     steps:
+      - run: java -version
       - name: Checkout project sources
         uses: actions/checkout@v2
       - name: Setup Gradle

@@ -6,6 +6,9 @@ jobs:
   build-gradle-project:
     runs-on: ubuntu-latest
     steps:
+      - run: sudo apt update
+      - run: sudo apt install -y openjdk-19-jdk
+      - run: sudo apt install -y openjdk-19-jre
       - run: java -version
       - name: Checkout project sources
         uses: actions/checkout@v2

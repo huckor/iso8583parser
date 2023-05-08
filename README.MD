@@ -1,4 +1,4 @@
-![workflow](https://github.com/huckor/iso8583parser/actions/workflows/gradle-publish.yml/badge.svg)
+![workflow](https://github.com/huckor/iso8583parser/actions/workflows/build-linux.yml/badge.svg)
 # ISO8583 Parser with GUI
 
 A simple ISO8583 parser with graphical user interface written in Java using JavaFX and j8583 library.

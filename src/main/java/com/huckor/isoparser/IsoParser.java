@@ -35,11 +35,39 @@ public class IsoParser {
                 return "";
             }
 
-            //Message type
+            //ISO version
+            String isoVersion = switch (clearIsoMessage.charAt(0)) {
+                case '0' -> "ISO 8583:1987";
+                case '1' -> "ISO 8583:1993";
+                case '2' -> "ISO 8583:2003";
+                case '8' -> "National use";
+                case '9' -> "Private use";
+                default -> "Reserved by ISO";
+            };
             StringBuilder out = new StringBuilder();
+            out.append("ISO version");
+            out.append(String.format("%-33s : ", " "));
+            out.append(isoVersion).append("\n");
+
+            //Message type
             out.append(String.format("%03d ", 0));
             out.append(String.format("%-40s : ", AppConstants.FIELD_NAMES.get(0) == null ? AppConstants.UNKNOWN_FIELD_NAME : AppConstants.FIELD_NAMES.get(0)));
             out.append(String.format("%04X ", message.getType())).append("\n");
+
+            //Primary bitmap
+            out.append(String.format("%03d ", 1));
+            out.append(String.format("%-40s : ", AppConstants.FIELD_NAMES.get(1) == null ? AppConstants.UNKNOWN_FIELD_NAME : AppConstants.FIELD_NAMES.get(1)));
+            out.append(String.format("%s", clearIsoMessage.substring(AppConstants.PRIMARY_BITMAP_START, AppConstants.PRIMARY_BITMAP_END)));
+
+            //Secondary bitmap (if exists)
+            byte [] secondBitmapIndicator = Helpers.asciiToBin(
+                    clearIsoMessage.substring(AppConstants.PRIMARY_BITMAP_START, AppConstants.PRIMARY_BITMAP_FIRST_FIELD)
+            );
+            if(Helpers.isBitSetInByte(secondBitmapIndicator[0], 8)) {
+                out.append(String.format("%s", clearIsoMessage.substring(AppConstants.SECONDARY_BITMAP_START, AppConstants.SECONDARY_BITMAP_END))).append("\n");
+            } else {
+                out.append("\n");
+            }
 
             //Loop through all ISO fields
             for (int i=AppConstants.FIRST_FIELD;i<=AppConstants.LAST_FIELD;i++) {

@@ -25,4 +25,11 @@ public class Helpers {
         }
         return data;
     }
+
+    public static boolean isBitSetInByte(byte Byte, int position) {
+        if(position < 1 || position > 8) {
+            return false;
+        }
+        return ((Byte << (~position & 31)) < 0);
+    }
 }

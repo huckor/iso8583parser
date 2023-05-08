@@ -8,6 +8,11 @@ public class AppConstants {
     public static String UNKNOWN_FIELD_NAME = "Unknown name";
     public static int FIRST_FIELD = 2;
     public static int LAST_FIELD = 128;
+    public static int PRIMARY_BITMAP_START = 4;
+    public static int PRIMARY_BITMAP_END = 4 + 16;
+    public static int SECONDARY_BITMAP_START = 4 + 16;
+    public static int SECONDARY_BITMAP_END = 4 + 16 + 16;
+    public static int PRIMARY_BITMAP_FIRST_FIELD = 4 + 2;
     public static Map<Integer, String> FIELD_NAMES;
     static {
         FIELD_NAMES = new HashMap<>();

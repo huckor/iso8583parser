@@ -1,4 +1,4 @@
-name: Build, test and create package - MacOS
+name: Build, test, packaging - MacOS
 
 on: [push]
 

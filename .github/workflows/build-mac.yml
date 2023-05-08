@@ -19,3 +19,8 @@ jobs:
         run: ./gradlew build test
       - name: Create package using jlink
         run: ./gradlew jlink jpackage
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: IsoParser-MacOSx64
+          path: build/jpackage/

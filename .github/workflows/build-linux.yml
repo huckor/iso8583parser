@@ -1,4 +1,4 @@
-name: Build app
+name: Build, test and create package - Linux
 
 on: [push]
 
@@ -18,4 +18,4 @@ jobs:
       - name: Gradle build and test
         run: ./gradlew build test
       - name: Create package using jlink
-        run: ./gradlew jlink
+        run: ./gradlew jlink jpackage

@@ -24,7 +24,7 @@ jobs:
       - name: Create package using jlink
         run: ./gradlew jlink jpackage
       - name: Tar files
-        run: tar -cvf IsoParser-Linux_x64.tar build/jpackage/IsoParser/
+        run: tar -cvf IsoParser-Linux_x64.tar -C build/jpackage/IsoParser .
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:

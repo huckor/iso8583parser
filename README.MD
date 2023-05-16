@@ -34,7 +34,7 @@ A simple ISO8583 parser with graphical user interface written in Java using Java
 This application expecting input data to be in HEX format. Message should start with MTI or use (5) spinner to skip first 'n' characters.
 
 By default, this application using ISO8583 specs as defined in file [parser-template.xml](src/main/resources/com/huckor/isoparser/parser-template.xml).
-In case your ISO8583 specs are different than you need to adjust template file accordingly [j8583 xml doc](https://j8583.sourceforge.net/xmlconf.html).
+In case your ISO8583 specs are different, then you need to adjust template file accordingly [j8583 xml doc](https://j8583.sourceforge.net/xmlconf.html).
 
 ## How to Contribute
 

@@ -17,7 +17,7 @@ A simple ISO8583 parser with graphical user interface written in Java using Java
 
 ## Usage
 
-This application expecting input data in HEX format. Message should start with MTI or use (5) spinner to skip first 'n' characters.
+<img width="793" alt="gui-prewiev" src="https://github.com/huckor/iso8583parser/assets/20068605/1a8c8899-7815-48ed-87e0-9efff901c90c">
 
 1. Paste your ISO8583 message in HEX format to this text box
 2. Parsed output will appear in this text box
@@ -25,5 +25,7 @@ This application expecting input data in HEX format. Message should start with M
 4. Use this button to load your custom ISO8583 template
 5. Use spinner to skip first 'n' characters of your ISO8583 message. This is useful to skip message header.
 
+This application expecting input data to be in HEX format. Message should start with MTI or use (5) spinner to skip first 'n' characters.
+
 By default this application using ISO8583 specs as defined in file [parser-template.xml](src/main/resources/com/huckor/isoparser/parser-template.xml).
-In case your ISO8583 specs are different then you need to adjust template file accordingly.
+In case your ISO8583 specs are different then you need to adjust template file accordingly [j8583 xml doc](https://j8583.sourceforge.net/xmlconf.html).

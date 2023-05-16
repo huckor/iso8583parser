@@ -2,6 +2,12 @@
 
 A simple ISO8583 parser with graphical user interface written in Java using JavaFX and j8583 library.
 
+# Download binaries
+
+- [Windows x64](https://github.com/huckor/iso8583parser/releases/download/1.0.0/IsoParser-Win_x64.zip)
+- [Linux x64](https://github.com/huckor/iso8583parser/releases/download/1.0.0/IsoParser-Linux_x64.zip)
+- [MacOS x64](https://github.com/huckor/iso8583parser/releases/download/1.0.0/IsoParser-MacOS_x64.zip)
+
 ## Build, test and packaging status
 ![workflow](https://github.com/huckor/iso8583parser/actions/workflows/build-linux.yml/badge.svg)
 ![workflow](https://github.com/huckor/iso8583parser/actions/workflows/build-mac.yml/badge.svg)
@@ -17,8 +23,6 @@ A simple ISO8583 parser with graphical user interface written in Java using Java
 
 ## Usage
 
-This application require Java Runtime Environment installed on host computer to be functional.
-
 <img width="793" alt="gui-prewiev" src="https://github.com/huckor/iso8583parser/assets/20068605/1a8c8899-7815-48ed-87e0-9efff901c90c">
 
 1. Paste your ISO8583 message in HEX format to this text box
@@ -30,7 +34,7 @@ This application require Java Runtime Environment installed on host computer to 
 This application expecting input data to be in HEX format. Message should start with MTI or use (5) spinner to skip first 'n' characters.
 
 By default, this application using ISO8583 specs as defined in file [parser-template.xml](src/main/resources/com/huckor/isoparser/parser-template.xml).
-In case your ISO8583 specs are different then you need to adjust template file accordingly [j8583 xml doc](https://j8583.sourceforge.net/xmlconf.html).
+In case your ISO8583 specs are different than you need to adjust template file accordingly [j8583 xml doc](https://j8583.sourceforge.net/xmlconf.html).
 
 ## How to Contribute
 

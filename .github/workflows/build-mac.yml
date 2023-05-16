@@ -1,4 +1,4 @@
-name: Build, test, packaging - MacOS
+name: MacOS
 
 on: [push]
 
@@ -23,4 +23,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: IsoParser-MacOS_x64
-          path: build/jpackage/
+          path: build/jpackage/*.dmg

@@ -1,6 +1,10 @@
 name: MacOS
 
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   build-gradle-project:
@@ -11,6 +15,7 @@ jobs:
         with:
           distribution: 'corretto'
           java-version: '19'
+          cache: gradle
       - name: Checkout project sources
         uses: actions/checkout@v3
       - name: Setup Gradle

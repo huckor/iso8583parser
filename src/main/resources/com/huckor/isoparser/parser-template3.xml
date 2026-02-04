@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE j8583-config PUBLIC "-//J8583//DTD CONFIG 1.0//EN"
+        "http://j8583.sourceforge.net/j8583.dtd">
+<j8583-config>
+
+    <!--Message definition for MTI 0200-->
+    <parse type="0200">
+        <field num="2" type="LLBCDBIN" />
+        <field num="3" type="NUMERIC" length="6" />
+        <field num="4" type="NUMERIC" length="12" />
+        <field num="6" type="NUMERIC" length="12" />
+        <field num="10" type="NUMERIC" length="8" />
+        <field num="11" type="NUMERIC" length="6" />
+        <field num="12" type="NUMERIC" length="6" />
+        <field num="13" type="NUMERIC" length="4" />
+        <field num="14" type="NUMERIC" length="4" />
+        <field num="22" type="NUMERIC" length="3" />
+        <field num="23" type="NUMERIC" length="3" />
+        <field num="24" type="NUMERIC" length="3" />
+        <field num="25" type="NUMERIC" length="2" />
+        <field num="32" type="LLVAR" />
+        <field num="35" type="LLBCDBIN" />
+        <field num="36" type="LLLVAR" />
+        <field num="37" type="ALPHA" length="12" />
+        <field num="38" type="ALPHA" length="6" />
+        <field num="39" type="ALPHA" length="2" />
+        <field num="41" type="ALPHA" length="8" />
+        <field num="42" type="ALPHA" length="15" />
+        <field num="43" type="ALPHA" length="40" />
+        <field num="45" type="LLVAR" />
+        <field num="48" type="ALPHA" length="6" />
+        <field num="51" type="ALPHA" length="3" />
+        <field num="52" type="BINARY" length="8" />
+        <field num="53" type="BINARY" length="10" />
+        <field num="54" type="ALPHA" length="12" />
+        <field num="55" type="LLLBIN" />
+        <field num="57" type="LLLVAR" />
+        <field num="58" type="LLLVAR" />
+        <field num="60" type="LLLVAR" />
+        <field num="61" type="LLLVAR" />
+        <field num="62" type="LLLVAR" />
+        <field num="63" type="LLLVAR" />
+        <field num="64" type="BINARY" length="8" />
+    </parse>
+
+    <!--Extend message definition of MTI 0200 to other message types for ISO 8583:1987-->
+    <parse type="0210" extends="0200" />
+    <parse type="0100" extends="0200" />
+    <parse type="0110" extends="0200" />
+    <parse type="0121" extends="0200" />
+    <parse type="0130" extends="0200" />
+    <parse type="0220" extends="0200" />
+    <parse type="0221" extends="0200" />
+    <parse type="0230" extends="0200" />
+    <parse type="0320" extends="0200" />
+    <parse type="0330" extends="0200" />
+    <parse type="0400" extends="0200" />
+    <parse type="0410" extends="0200" />
+    <parse type="0420" extends="0200" />
+    <parse type="0430" extends="0200" />
+    <parse type="0500" extends="0200" />
+    <parse type="0510" extends="0200" />
+    <parse type="0510" extends="0200" />
+    <parse type="0800" extends="0200" />
+    <parse type="0810" extends="0200" />
+    <parse type="0820" extends="0200" />
+
+    <!--Extend message definition of MTI 0200 to other message types for ISO 8583:1993-->
+    <parse type="1210" extends="0200" />
+    <parse type="1100" extends="0200" />
+    <parse type="1110" extends="0200" />
+    <parse type="1121" extends="0200" />
+    <parse type="1130" extends="0200" />
+    <parse type="1220" extends="0200" />
+    <parse type="1221" extends="0200" />
+    <parse type="1230" extends="0200" />
+    <parse type="1320" extends="0200" />
+    <parse type="1330" extends="0200" />
+    <parse type="1400" extends="0200" />
+    <parse type="1410" extends="0200" />
+    <parse type="1420" extends="0200" />
+    <parse type="1430" extends="0200" />
+    <parse type="1500" extends="0200" />
+    <parse type="1510" extends="0200" />
+    <parse type="1510" extends="0200" />
+    <parse type="1800" extends="0200" />
+    <parse type="1810" extends="0200" />
+    <parse type="1820" extends="0200" />
+
+    <!--Extend message definition of MTI 0200 to other message types for ISO 8583:2003-->
+    <parse type="2210" extends="0200" />
+    <parse type="2100" extends="0200" />
+    <parse type="2110" extends="0200" />
+    <parse type="2121" extends="0200" />
+    <parse type="2130" extends="0200" />
+    <parse type="2220" extends="0200" />
+    <parse type="2221" extends="0200" />
+    <parse type="2230" extends="0200" />
+    <parse type="2320" extends="0200" />
+    <parse type="2330" extends="0200" />
+    <parse type="2400" extends="0200" />
+    <parse type="2410" extends="0200" />
+    <parse type="2420" extends="0200" />
+    <parse type="2430" extends="0200" />
+    <parse type="2500" extends="0200" />
+    <parse type="2510" extends="0200" />
+    <parse type="2510" extends="0200" />
+    <parse type="2800" extends="0200" />
+    <parse type="2810" extends="0200" />
+    <parse type="2820" extends="0200" />
+
+</j8583-config>

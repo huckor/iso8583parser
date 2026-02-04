@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AppConstants {
-    public static String DEFAULT_ISO_SPEC_FILE = "parser-template.xml";
+    public static String ISO_SPEC_FILE_1 = "parser-template.xml";
+    public static String ISO_SPEC_FILE_2 = "parser-template2.xml";
+    public static String ISO_SPEC_FILE_3 = "parser-template3.xml";
     public static String UNKNOWN_FIELD_NAME = "Unknown name";
     public static int FIRST_FIELD = 2;
     public static int LAST_FIELD = 128;

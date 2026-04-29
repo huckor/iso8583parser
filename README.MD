@@ -7,6 +7,7 @@ A simple ISO8583 parser with graphical user interface written in Java using Java
 - [Windows x64](https://github.com/huckor/iso8583parser/releases/download/1.1.0/IsoParser-Win_x64.zip)
 - [Linux x64](https://github.com/huckor/iso8583parser/releases/download/1.1.0/IsoParser-Linux_x64.zip)
 - [MacOS x64](https://github.com/huckor/iso8583parser/releases/download/1.1.0/IsoParser-MacOS_x64.zip)
+- - [MacOS x64](https://github.com/huckor/iso8583parser/releases/download/1.1.0/IsoParser-MacOS_ARM64.zip)
 
 ## Build, test and packaging status
 ![workflow](https://github.com/huckor/iso8583parser/actions/workflows/build-linux.yml/badge.svg)

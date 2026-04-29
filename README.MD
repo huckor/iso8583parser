@@ -20,11 +20,11 @@ Because this app is currently unsigned, macOS will flag it as "damaged" or from 
 
 1. **Download and mount** the `.dmg` file.
 2. **Drag** the `.app` to your **Applications** folder.
-3. **Open Terminal** (Command + Space, type "Terminal") and run the following command:
+3. **Open Terminal** and run the following command:
    ```bash
    xattr -rd com.apple.quarantine /Applications/IsoParser.app
    ```
-4. Launch the app normally from your Applications folder or Launchpad.
+4. **Launch the app normally** from your Applications folder or Launchpad.
 
 **NOTE:** You only need to run the Terminal command once after the initial installation.
 
@@ -47,6 +47,11 @@ Because this app is currently unsigned, macOS will flag it as "damaged" or from 
 5. Use spinner to skip first 'n' characters of your ISO8583 message. This is useful to skip message header.
 
 This application expecting input data to be in HEX format. Message should start with MTI or use (5) spinner to skip first 'n' characters.
+
+**Example message:** 
+```bash
+0210303801000E80029100000000000015000000002010091301100246303030303030303633343731333131333139303037383030303030320025720B860984180000041CDF3616910A44485E7516F4AFB43030004149504B413135323332383830313030303232303131303131330000000000000000000000000000000000124872766D7179656972642020836028C700000000
+```
 
 By default, this application using ISO8583 specs as defined in file [parser-template.xml](src/main/resources/com/huckor/isoparser/parser-template.xml).
 In case your ISO8583 specs are different, then you need to adjust template file accordingly [j8583 xml doc](https://j8583.sourceforge.net/xmlconf.html).

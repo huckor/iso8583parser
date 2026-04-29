@@ -2,17 +2,31 @@
 
 A simple ISO8583 parser with graphical user interface written in Java using JavaFX and j8583 library.
 
+## Build, test and packaging status
+![workflow](https://github.com/huckor/iso8583parser/actions/workflows/build-linux.yml/badge.svg)
+![workflow](https://github.com/huckor/iso8583parser/actions/workflows/build-mac.yml/badge.svg)
+![workflow](https://github.com/huckor/iso8583parser/actions/workflows/build-win.yml/badge.svg)
+
 # Download binaries
 
 - [Windows x64](https://github.com/huckor/iso8583parser/releases/download/1.1.0/IsoParser-Win_x64.zip)
 - [Linux x64](https://github.com/huckor/iso8583parser/releases/download/1.1.0/IsoParser-Linux_x64.zip)
 - [MacOS x64](https://github.com/huckor/iso8583parser/releases/download/1.1.0/IsoParser-MacOS_x64.zip)
-- - [MacOS x64](https://github.com/huckor/iso8583parser/releases/download/1.1.0/IsoParser-MacOS_ARM64.zip)
+- [MacOS ARM64](https://github.com/huckor/iso8583parser/releases/download/1.1.0/IsoParser-MacOS_ARM64.zip)
 
-## Build, test and packaging status
-![workflow](https://github.com/huckor/iso8583parser/actions/workflows/build-linux.yml/badge.svg)
-![workflow](https://github.com/huckor/iso8583parser/actions/workflows/build-mac.yml/badge.svg)
-![workflow](https://github.com/huckor/iso8583parser/actions/workflows/build-win.yml/badge.svg)
+## Installation for macOS (Apple Silicon)
+
+Because this app is currently unsigned, macOS will flag it as "damaged" or from an unidentified developer. Please follow these steps to install:
+
+1. **Download and mount** the `.dmg` file.
+2. **Drag** the `.app` to your **Applications** folder.
+3. **Open Terminal** (Command + Space, type "Terminal") and run the following command:
+   ```bash
+   xattr -rd com.apple.quarantine /Applications/IsoParser.app
+   ```
+4. Launch the app normally from your Applications folder or Launchpad.
+
+**NOTE:** You only need to run the Terminal command once after the initial installation.
 
 ## Features
 
